@@ -1,0 +1,8 @@
+#!/bin/bash
+#SCREESHOT_DIR=$(expr ~/Pictures/Screenshots)
+SCREESHOT_DIR=~/Pictures/Screenshots
+xdpyinfo -ext XINERAMA | sed '/^  head #/!d;s///' |
+while IFS=' :x@,' read i w h x y; do
+	echo $w, $h
+	import -window root -crop ${w}x$h+$x+$y $SCREESHOT_DIR/$(date +%F_%H%M%S)_${w}x${h}_$i.png
+done
