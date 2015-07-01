@@ -59,6 +59,8 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , resource  =? "gpicview"       --> doFloat
     , className =? "MPlayer"        --> doFloat
+    , resource  =? "Foxyproxy-options"   --> doFloat
+    --, className =? "FoxyProxy Standard"   --> doFloat
     , className =? "VirtualBox"     --> doShift "4:vm"
     , className =? "Xchat"          --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore
@@ -93,6 +95,8 @@ myFocusedBorderColor = "#ffb6b0"
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme {
+	-- fontName = "xft:Monaco:size=12",
+	fontName = "xft:YaHei Consolas Hybrid:size=8",
     activeBorderColor = "#7C7C7C",
     activeTextColor = "#CEFFAC",
     activeColor = "#000000",
